@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected color</title>
+
+    <link rel="stylesheet" href="./css/selected-color.css">
+</head>
+<body>
+    
+    <p class="title-text"><a href="./index.html">Go back</a></p> 
+
+    <p class="text">Палітра дає можливість вибрати колір по кліку і відображає обраний колір. Кожен клік на елементі палітри — це подія, 
+        яка змінює колір і вміст заголовка. Елементів дуже багато. Замість призначення обробника кожному елементу палітри, 
+        повісимо один слухач на загального предка div.color-palette.
+        В обробнику події кліка використовуємо event.target, щоб отримати елемент, на якому безпосередньо відбулася подія, і пов'язаний 
+        з ним колір. Інформацію про колір будемо зберігати в атрибуті data-color.
+        Обов'язково перевіряємо цільовий елемент події click. Це точно має бути кнопка, в іншому разі ми випадково можемо обробити клік, 
+        коли користувач клікне між кнопками, що може викликати помилку. Для перевірки типу елемента використовуємо властивість nodeName.</p>
+
+    <p class="output">Selected color: -</p>
+    <div class="color-palette"></div>
+
+
+    <script src="./js/selected-color.js" type="module"></script>
+</body>
+</html>

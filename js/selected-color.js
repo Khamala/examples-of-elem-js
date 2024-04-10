@@ -1,7 +1,3 @@
-
-
-
-
 const colorPalette = document.querySelector(".color-palette");
 const output = document.querySelector(".output");
 
@@ -19,11 +15,14 @@ function selectColor(event) {
 }
 
 // Some helper functions to render palette items
+
 createPaletteItems();
 
 function createPaletteItems() {
-  const items = [];
-  for (let i = 0; i < 60; i++) {
+    const items = [];
+    
+    for (let i = 0; i < 60; i++) {
+      
     const color = getRandomHexColor();
     const item = document.createElement("button");
     item.type = "button";
@@ -35,6 +34,7 @@ function createPaletteItems() {
   colorPalette.append(...items);
 }
 
+
 function getRandomHexColor() {
   const letters = "0123456789ABCDEF";
   let color = "#";
@@ -45,3 +45,7 @@ function getRandomHexColor() {
 
   return color;
 }
+
+
+
+console.log(window.localStorage.length);

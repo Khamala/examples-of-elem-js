@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markup Forms</title>
+
+    <!--Для подключения файла стилей-->
+    <link rel="stylesheet" href="./css/form-signup.css">
+
+</head>
+<body>
+
+    <ul>
+        <li>
+            <!--Пример 1 разметки формы для регистрации-->
+            <form name="signup_form" autocomplete="on" novalidate>
+                <label>
+                    Email
+                    <input type="email" name="email"/>
+                </label>
+            
+                <label class="label">
+                    Password
+                    <input type="password" name="password" />
+                </label>
+            
+                <button type="submit">Submit</button>
+            </form>
+        </li>
+
+        <li>
+            <!--Пример разметки формы для регистрации, если инпут не вложен в лабель. Нужно привязать явно-->
+            <form>
+                <label for="user_email" class="label">Email</label>
+                <input type="email" name="email" id="user_email" />
+            
+                <label for="user_password" class="label">Password</label>
+                <input type="password" name="password" id="user_password" />
+            
+                <button type="submit">Submit</button>
+            </form>
+
+        </li>
+
+        <!--Пример 2 разметки формы для регистрации-->
+        <li>
+            <form>
+                <label>
+                    Email
+                    <input type="email" name="email" />
+                </label>
+                <label>
+                    Password
+                    <input type="password" name="pwd" minlength="5" maxlength="12" />
+                </label>
+                <label>
+                    Phone number
+                    <input type="tel" name="phone" />
+                </label>
+                <button type="submit">Register</button>
+            </form>
+        </li>
+    </ul>
+
+    
+</body>
+</html>
